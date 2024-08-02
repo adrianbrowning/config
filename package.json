@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@gingacodemonkey/config",
+  "description": "A collection of TypeScript configurations, based on Total TypeScript's TSConfig Cheat Sheet. ESLint rules based on @epic-web/config.",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "eslint": "^9.8.0",
+    "husky": "^9.1.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.1",
+    "react": "^18.3.1",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "pnpm version patch --no-git-tag-version && pnpm pack",
+    "prepare": "husky"
+  },
+  "main": "setup.js",
+  "bin": {
+    "eslint-setup": "./setup.js"
+  },
+  "peerDependencies": {
+    "eslint": "^9.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrianbrowning/config.git"
+  },
+  "homepage": "https://github.com/adrianbrowning/config.git",
+  "author": "Adrian Elton-Browning",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "license": "MIT",
+  "imports": {
+    "#/*": "./*"
+  },
+  "exports": {
+    "./tsc": "./tsc/dom/app.json",
+    "./tsc/dom": "./tsc/dom/app.json",
+    "./tsc/dom/app": "./tsc/dom/app.json",
+    "./tsc/dom/library": "./tsc/dom/library.json",
+    "./tsc/dom/library-monorepo": "./tsc/dom/library-monorepo.json",
+    "./tsc/no-dom": "./tsc/no-dom/app.json",
+    "./tsc/no-dom/app": "./tsc/no-dom/app.json",
+    "./tsc/no-dom/library": "./tsc/no-dom/library.json",
+    "./tsc/no-dom/library-monorepo": "./tsc/no-dom/library-monorepo.json",
+    "./bundler": "./bundler/dom.json",
+    "./bundler/dom": "./bundler/dom.json",
+    "./bundler/dom/app": "./bundler/dom.json",
+    "./bundler/dom/library": "./bundler/dom.json",
+    "./bundler/dom/library-monorepo": "./bundler/dom.json",
+    "./bundler/no-dom": "./bundler/no-dom.json",
+    "./bundler/no-dom/app": "./bundler/no-dom.json",
+    "./bundler/no-dom/library": "./bundler/no-dom.json",
+    "./bundler/no-dom/library-monorepo": "./bundler/no-dom.json",
+    "./eslint": "./eslint.js",
+    "./styled": "./eslint.styled.js"
+  },
+  "dependencies": {
+    "@eslint/compat": "^1.1.0",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.5.0",
+    "@stylistic/eslint-plugin": "^1.5.4",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-import-x": "^0.5.2",
+    "eslint-plugin-jest-dom": "^5.4.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.2.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-compiler": "^0.0.0-experimental-0998c1e-20240625",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-security-node": "^1.1.4",
+    "eslint-plugin-simple-import-sort": "^9.0.0",
+    "eslint-plugin-testing-library": "^6.2.2",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-vitest": "^0.5.4",
+    "globals": "^15.4.0",
+    "prettier-plugin-tailwindcss": "^0.6.1",
+    "tslib": "^2.6.3",
+    "typescript-eslint": "^8.0.0"
+  }
+}
